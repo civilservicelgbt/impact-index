@@ -1,0 +1,60 @@
+div.container {
+	
+	display: grid;
+	position: relative;
+	
+	margin-left: 		auto;
+	margin-right: 		auto;
+	
+	/*
+	$sm: 540px;
+	$md: 720px;
+	$lg: 960px;
+	$xl: 1140px;
+	*/
+	
+	// Default size for XS 
+	
+		max-width: 			300px;
+
+	@include sm {
+		max-width: 			540px;	
+	}
+	
+	@include md {
+		max-width: 			720px;	
+	}
+	
+	@include lg {
+		max-width: 			960px;	
+	}
+	
+	@include xl {
+		max-width: 			1140px;	
+	}
+	
+}
+
+div.slide.example div.container {
+	
+	grid-template-rows:		auto auto;
+	grid-template-columns:	auto;
+	
+	grid-template-areas:	"example"
+							"question";
+	
+	@include md-up {
+		grid-template-rows:		auto;
+		grid-template-columns:	50% 50%;
+		
+		grid-template-areas: "example question";
+	}
+	
+	div.exampleExplainer {
+		grid-area:		example;
+	}
+	
+	div.exampleQuestion {
+		grid-area:		question;
+	}
+}

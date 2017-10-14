@@ -1,0 +1,70 @@
+<div id="sectionSpecial" class="section">
+    <div id="special-home" class="slide first-slide active">
+    
+	    <div class="container">
+
+			<section class="section-colophon">
+		
+				<h1 class="slide-set-title"><strong>Special Impact</strong> Awards
+				</h1>
+				
+				<p class="lead">These special awards recognise four people who have made, or are making, a significant impact on the Civil Service and lives of LGBT people</p>
+				
+				{% include see-more.html %}
+		    			
+	    	</section>
+	    	
+	    </div>
+    
+    </div><div class="slide all-winners">
+    	
+		<div class="container">
+						
+			<h1>All winners</h1>
+						
+			{% for place in site.data.index %}
+			
+				{% if place.index == 'Special' %}
+				
+					<div class="place-no-rank">
+						
+						<div class="meta">
+							<h2 class="name">{{ place.name }}</h2>
+							<p class="meta">{{ place.award }}</p>
+						</div>
+						
+					</div>
+				
+				{% endif %}
+			
+		    {% endfor %}
+		    			
+		</div>
+	        
+    </div>
+    
+	{% for place in site.data.index %}
+
+    	{% if place.index == 'Special' %}
+    
+		    <div class="slide place-large">
+		    	
+				<div class="container">
+					
+					<div class="place">
+					
+						<h1>{{ place.name }}</h1>
+						<p class="lead">{{ place.award }}</p>
+						{{ place.blurb | markdownify }}
+					
+					</div>
+					
+				</div>
+			        
+		    </div>
+					
+		{% endif %}
+    
+    {% endfor %}
+		    
+</div>

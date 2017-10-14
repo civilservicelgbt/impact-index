@@ -1,0 +1,15 @@
+#video-bg {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	top:0;
+	right:0;
+	width: 100vw;
+	height: 100vh;
+	background-size: 150% 150%;
+	background-color: black; /* in case the video doesn't fit the whole page*/
+	background-position: center center;
+	background-size: cover;
+	object-fit: cover; /*cover video background */
+	z-index:3;
+}

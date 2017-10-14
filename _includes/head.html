@@ -1,0 +1,140 @@
+<!-- Required meta tags always come first -->
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" 	content="ie=edge">
+<meta name="viewport" 				content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+
+
+<!-- Base URL to use for all relative URLs contained within the document -->
+<base href="{{ site.baseurl | prepend: site.url }}">
+<meta name="url" 					content="{{ site.baseurl | prepend: site.url }}">
+
+
+
+<!-- Site and page title -->
+<title>
+    {% if page.layout == 'home' %}
+    	{{ site.title | strip_html }}
+    {% elsif page.layout == 'four-oh-four' %}
+    	404 &middot; Page not found &middot; {{ site.title | strip_html }}
+    {% else %}
+    	{{ page.title | strip_html }} &middot; {{ site.title | strip_html }}
+    {% endif %}
+</title>
+
+
+
+<!-- Basic meta information -->
+<meta name="application-name" 		content="
+									{% if page.layout == 'home' %}
+										{{ site.title | strip_html }}
+									{% else %}
+										{{ page.title | strip_html }} &middot; {{ site.title | strip_html }}
+									{% endif %}
+									">
+	
+<meta name="description"			content="{{ site.description | strip_html }}" />
+
+
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" 				content="
+									{% if page.layout == 'home' %}
+										{{ site.title | strip_html }}
+									{% else %}
+										{{ page.title | strip_html }} &middot; {{ site.title | strip_html }}
+									{% endif %}
+									">
+	
+<meta itemprop="description" 		content="{{ site.description | strip_html }}">
+<meta itemprop="image" 				content="{{ site.opengraph-image | prepend: site.baseurl | prepend: site.url }}">
+
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" 			content="summary_large_image">
+<meta name="twitter:site" 			content="@{{ site.twitter-username }}">
+<meta name="twitter:creator" 		content="@{{ site.twitter-username }}">
+<meta name="twitter:title" 			content="
+									{% if page.layout == 'home' %}
+										{{ site.title | strip_html }}
+									{% else %}
+										{{ page.title | strip_html }} &middot; {{ site.title | strip_html }}
+									{% endif %}
+									">
+<meta name="twitter:description" 	content="
+									{% if page.excerpt %}
+										{{ page.excerpt | strip_html }}
+									{% else %}
+										{{ site.description | strip_html }}
+									{% endif %}
+									">
+<meta name="twitter:image" 			content="
+									{% if page.image %}
+										{{ page.image | prepend: site.post-images-path | prepend: site.baseurl | prepend: site.url }}
+									{% else %}
+										{{ site.twitter-image | prepend: site.baseurl | prepend: site.url }}{% endif %}
+									">
+<meta name="twitter:image:alt" 		content="
+									{% if page.image-description %}
+										{{ page.image-description | strip_html }}
+									{% endif %}">
+
+<!-- Open Graph data -->
+<meta property="fb:app_id" 			content="{{ site.facebook-app-id }}" />
+<meta property="fb:profile_id" 		content="{{ site.facebook-profile-id }}" />
+<meta property="fb:admins" 			content="{{ site.facebook-profile-id }}" />
+<meta property="og:url" 			content="{{ page.url | prepend: site.baseurl | prepend: site.url }}"  />
+<meta property="og:type" 			content="{% if page.layout == 'post' %}article{% else %}website{% endif %}" />
+<meta property="og:rich_attachment" content="true" />
+<meta property="og:title" 			content="
+									{% if page.layout == 'home' %}
+										{{ site.title | strip_html }}
+									{% else %}
+										{{ page.title | strip_html }} &middot; {{ site.title | strip_html }}
+									{% endif %}
+									" />
+<meta property="og:description" 	content="
+									{% if page.excerpt %}
+										{{ page.excerpt | strip_html }}
+									{% else %}
+										{{ site.description | strip_html }}
+									{% endif %}
+									" />
+<meta property="og:image" 			content="
+									{% if page.image %}
+										{{ page.image | prepend: site.post-images-path | prepend: site.baseurl | prepend: site.url }}
+									{% else %}
+										{{ site.opengraph-image | prepend: site.baseurl | prepend: site.url }}{% endif %}
+									" />
+<meta property="article:author" 	content="{{ site.facebook-slug | prepend: 'https://www.facebook.com/' }}" />
+<meta property="article:publisher" 	content="{{ site.facebook-slug | prepend: 'https://www.facebook.com/' }}" />
+<meta property="og:site_name" 		content="{{ site.title | strip_html }}" />
+
+<!-- Touch Icons -->
+<link rel="icon" 					href="{{ site.touch | prepend: site.baseurl | prepend: site.url }}">
+<link rel="apple-touch-icon" 		href="{{ site.touch | prepend: site.baseurl | prepend: site.url }}">
+
+<!-- Pinned Site -->
+<link rel="mask-icon" 				href="{{ site.pinned | prepend: site.baseurl | prepend: site.url }}" 
+									color="{{ site.pinned-colour }}">
+<meta name="theme-color" 			content="{{ site.pinned-colour }}">
+
+<!-- Google site verification -->
+<meta name="google-site-verification" content="{{ site.google-site-verification }}">
+
+<!-- Scripts -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="{{ '/scrolloverflow.min.js' | prepend: site.js-path | prepend: site.baseurl | prepend: site.url }}"></script>
+
+<script type="text/javascript" src="{{ '/jquery.fullPage.js' | prepend: site.js-path | prepend: site.baseurl | prepend: site.url }}"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" 				href="{{ '/styles.css' | prepend: site.css-path | prepend: site.baseurl | prepend: site.url }}">
+
+<!-- URLs and feeds -->
+<link rel="canonical" 				href="{{ page.url | replace:'index.html','/' | prepend: site.baseurl | prepend: site.url }}">
+<link rel="alternate" 				type="application/rss+xml" 
+									title="{{ site.title }}" 
+									href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">

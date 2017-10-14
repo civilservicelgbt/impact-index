@@ -1,0 +1,60 @@
+// GRID
+
+$xs: 	0;
+$sm:	576px;
+$md:	768px;
+$lg:	992px;
+$xl:	1200px;
+
+
+@mixin sm {
+  @media (min-width: #{$sm}) and (max-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$md}) and (max-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$lg}) and (max-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin md-up {
+  @media (min-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin lg-up {
+  @media (min-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin xl-up {
+  @media (min-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin gradient($color-1, $color-2) {
+	
+	background: $color-1; /* Old browsers */
+	background: -moz-linear-gradient(45deg, $color-1 0%, $color-2 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, $color-1 0%,$color-2 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, $color-1 0%,$color-2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-1', endColorstr='$color-2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+}

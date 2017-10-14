@@ -1,0 +1,354 @@
+// Navigation arrows 
+//		"controlArrows: true," must be activated in app.js for this to make a difference
+
+.fp-controlArrow.fp-prev {
+    left: 1rem;
+    border: none;
+    width: 9px;
+    height: 44px;
+    background: url(../images/left-arrow.png);
+    background: url(../images/left-arrow.svg), none;
+    background-size: 9px 44px;
+    cursor: pointer;
+}
+.fp-controlArrow.fp-next {
+    right: 1rem;
+    border: none;
+    width: 9px;
+    height: 44px;
+    background: url(../images/right-arrow.png);
+    background: url(../images/right-arrow.svg), none;
+    background-size: 9px 44px;
+    cursor: pointer;
+}
+
+// Keyboard nav
+
+div#keyboard-hint {
+	
+	opacity: 0;
+	display: none;
+				
+	@include media-breakpoint-up(md) {
+			
+		animation: 10s keyboard-hint;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in-out;
+		animation-delay: 5s;
+		
+		display: grid;
+		position: absolute;
+		
+		max-width: 450px;
+		
+		bottom: 1rem;
+		right: 1rem;
+		
+		padding: 1rem;
+		
+		background: rgba(0,0,0, 0.5);
+		border-radius: 15px;
+		
+		grid-template-columns: 		25% auto;
+		grid-template-rows: 		auto;
+		grid-template-areas: 		"image text";
+		
+		picture {
+			
+			grid-area: 		image;
+			
+			align-self: center;
+	
+			margin-left: auto;
+			margin-right: auto;
+			
+			max-width: 100px;
+			
+			svg,img {
+				max-width: 100px;
+			}
+		}
+		
+		p {
+			grid-area: 		text;
+			
+			margin: 0px 0px 0px 10px;
+		}
+		
+	}
+	
+}
+
+@keyframes keyboard-hint {
+	0% {
+		opacity: 0;
+	}
+	5% {
+		opacity: 1;
+	}
+	95% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+// Background gradients
+
+#sectionHome, #section404 {
+	@include gradient($pink, $purple);
+}
+
+#sectionAbout {
+	background: white;
+}
+
+#sectionSpecial {
+	@include gradient($pink, $purple);
+}
+
+#sectionLGBT {
+	@include gradient($green, $yellow);
+}
+
+#sectionAllies {
+	@include gradient($blue, $purple);
+}
+
+#sectionNetworks {
+	@include gradient($red, $yellow);
+}
+
+#sectionTeams {
+	@include gradient($pink, $blue);
+}
+
+#section404 {
+	color: white;
+	a {
+		font-weight: 700;
+		color: white;
+	}
+}
+/*solves problem with overflowing video in Mac with Chrome */
+#sectionHome .slide {
+	
+		color: #f1f1f1;
+		
+		div.container {
+			
+			display: grid;
+		
+			// Grid spacing
+		
+			grid-template-rows:  	auto;
+			grid-template-columns: 	auto;
+			
+			grid-template-areas:	"main";
+									
+			justify-items:			center;
+		}
+		
+		div#site-info {
+			
+			display: grid;
+			
+			grid-area: "main";
+			
+			align-self: 	center;
+			
+			max-width: 300px;
+			
+				
+			@include media-breakpoint-up(sm) {
+			
+				max-width: 400px;
+				
+			}
+				
+			@include media-breakpoint-up(md) {
+			
+				max-width: 625px;
+				
+			}
+			
+		}
+		
+		a {
+			
+			display: 	grid;
+			position: 	absolute;
+			
+			bottom: 	0;
+			padding: 	10px;
+			width: 		100%;
+			
+			justify-content: center;
+		
+			picture.down-arrow {
+				
+				img {				
+					width: 60px;
+					height: 30px;
+				}
+			}
+			
+		}	
+			
+	
+	
+}
+
+section.site-colophon,
+section.section-colophon {
+
+	margin-left: 		auto;
+	margin-right: 		auto;
+	
+	padding-top: 3rem;
+	padding-bottom: 3rem;	
+	max-width: 300px;
+	
+	@include media-breakpoint-up(sm) {
+
+		max-width: 400px;
+		
+	}
+				
+	@include media-breakpoint-up(md) {
+
+		max-width: 550px;
+		
+	}
+	
+}
+
+
+div.all-winners div.container {
+	
+	margin-left: 		auto;
+	margin-right: 		auto;
+	
+	padding-top: 100px;
+	padding-bottom: 100px;	
+	max-width: 300px;
+	
+	@include media-breakpoint-up(sm) {
+
+		max-width: 400px;
+		
+	}
+				
+	@include media-breakpoint-up(md) {
+
+		max-width: 550px;
+		
+	}
+	
+	div.place {
+		display:		grid;
+		
+		grid-template-columns: 		40px auto;
+		grid-template-rows: 		auto;
+		grid-gap: 					10px;
+				
+		@include media-breakpoint-up(md) {
+	
+			grid-gap: 					30px;
+			
+		}
+		
+		grid-template-areas: 		"number info";
+		
+		margin-bottom: 1rem;
+									
+		span.rank {
+			grid-area:		number;
+		}
+		div.meta {
+			grid-area: 		info;
+		}
+		
+	}
+	div.place-no-rank {
+		display:		grid;
+		
+		grid-template-columns: 		auto;
+		grid-template-rows: 		auto;
+		grid-gap: 					10px;
+				
+		@include media-breakpoint-up(md) {
+	
+			grid-gap: 					30px;
+			
+		}
+		
+		grid-template-areas: 		"info";
+		
+		margin-bottom: 1rem;
+		
+		div.meta {
+			grid-area: 		info;
+		}
+		
+	}
+	
+}
+
+div.slide.place-large,
+div.slide.place-small {
+	
+	div.container {
+	
+		background: 	white;
+		height: 		100%;
+		
+	}
+	
+}
+
+div.place-large div.place {
+	
+	margin-top: auto;
+	margin-bottom: auto;
+	
+	padding: 50px 1rem;
+				
+	@include media-breakpoint-up(md) {
+	
+			padding: 100px 50px;
+		
+	}
+}
+
+div.place-small div.place {
+	
+	margin-top: auto;
+	margin-bottom: auto;
+	
+	padding: 10px 1rem;
+				
+	@include media-breakpoint-up(md) {
+	
+			padding: 10px 50px;
+		
+	}
+	
+	&:first-of-type {
+		
+		padding-top: 50px;
+		
+		@include media-breakpoint-up(md) {
+			padding-top: 100px;
+		}
+	}
+	&:last-of-type {
+		
+		padding-bottom: 50px;
+		
+		@include media-breakpoint-up(md) {
+			padding-bottom: 100px;
+		}
+	}
+}

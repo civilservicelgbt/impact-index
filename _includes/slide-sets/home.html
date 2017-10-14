@@ -1,0 +1,32 @@
+<div class="section active" id="sectionHome">
+    <div class="slide active">
+	    
+	    <div class="container">
+
+			<div id="site-info">
+				<h1 class="site-title"><strong>Civil Service</strong> Impact Index</h1>
+				<p>{{ site.description }}</p>
+			</div>
+			
+	    </div>
+			
+		<a href="#about" title="Continue to next section">
+		<picture class="down-arrow">
+			<source srcset="{{ '/down-arrow.svg' | prepend: site.image-path | prepend: site.baseurl | prepend: site.url }}" type="image/svg+xml">
+			<img src="{{ '/down-arrow.png' | prepend: site.image-path | prepend: site.baseurl | prepend: site.url }}">
+		</picture>
+		</a>
+		
+		<div id="keyboard-hint">
+		
+			<picture class="keyboard">
+				<source srcset="{{ '/keyboard-nav.svg' | prepend: site.image-path | prepend: site.baseurl | prepend: site.url }}" type="image/svg+xml">
+				<img src="{{ '/keyboard-nav.png' | prepend: site.image-path | prepend: site.baseurl | prepend: site.url }}">
+			</picture>
+			
+			<p>Use the arrow keys on your keyboard to navigate.</p>
+			
+		</div>
+
+	</div>
+</div>

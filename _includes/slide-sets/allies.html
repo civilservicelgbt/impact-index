@@ -1,0 +1,95 @@
+<div id="sectionAllies" class="section">
+    <div id="allies-home" class="slide first-slide active">
+    
+	    <div class="container">
+
+			<section class="section-colophon">
+		
+				<h1 class="slide-set-title"><strong>Allies</strong> Impact Index</h1>
+				
+				<p class="lead">Celebrating individuals who aren't LGBT, but who are making a difference to the lives of LGBT civil servants and LGBT citizens</p>
+				
+				{% include see-more.html %}
+		    			
+	    	</section>
+	    	
+	    </div>
+    
+    </div>
+    <div class="slide all-winners">
+    	
+		<div class="container">
+						
+			<h1>All winners</h1>
+						
+			{% for place in site.data.index %}
+			
+				{% if place.index == 'Allies' %}
+				
+					<div class="place">
+						
+						<span class="rank">{{ place.rank }}</span>
+						<div class="meta">
+							<h2 class="name">{{ place.name }}</h2>
+							<p class="meta">{% if place.role %}{{ place.role | append: "; " }}{% endif %}{{ place.department }}</p>
+						</div>
+						
+					</div>
+				
+				{% endif %}
+			
+		    {% endfor %}
+		    			
+		</div>
+	        
+    </div>
+    
+	{% for place in site.data.index %}
+
+    	{% if place.index == 'Allies' and place.style == 'large' %}
+    
+		    <div class="slide place-large">
+		    	
+				<div class="container">
+					
+					<div class="place">
+					
+						<h1>{{ place.rank | append: ". " }}{{ place.name }}</h1>
+						{% if place.role %}<p class="lead">{{ place.role | append: "; " }}{% endif %}{% if place.department %}{{ place.department }}</p>{% endif %}
+						{{ place.blurb | markdownify }}
+					
+					</div>
+					
+				</div>
+			        
+		    </div>
+					
+		{% endif %}
+    
+    {% endfor %}
+		    
+    <div class="slide place-small">
+    	
+		<div class="container">
+			
+			{% for place in site.data.index %}
+			
+				{% if place.index == 'Allies' and place.style == 'small' %}
+					
+					<div class="place">
+					
+						<h1>{{ place.rank | append: ". " }}{{ place.name }}</h1>
+						{% if place.role %}<p class="lead">{{ place.role | append: "; " }}{% endif %}{% if place.department %}{{ place.department }}</p>{% endif %}
+						{{ place.blurb | markdownify }}
+					
+					</div>
+				
+				{% endif %}
+			
+		    {% endfor %}
+			
+		</div>
+	        
+    </div>
+
+</div>

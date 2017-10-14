@@ -1,0 +1,377 @@
+#site-info {
+	
+	h1.site-title {
+		
+		text-transform: uppercase;
+		
+		font-size: $h1-font-size;
+		font-weight: 700;
+		line-height: 1;
+		
+		color:						white;
+		-webkit-text-stroke-color:  white;
+		text-stroke-color:  white;
+		-webkit-text-fill-color: 	transparent;
+		text-fill-color: 	transparent;
+		-webkit-text-stroke-width: 	3px;
+		text-stroke-width: 	3px;
+		
+		@include media-breakpoint-up(md) {
+			-webkit-text-stroke-width: 	4px;
+			text-stroke-width: 	4px;
+		}
+		
+		strong {
+			font-weight: 700;
+			color:						white;
+			-webkit-text-fill-color: 	white;
+			-webkit-text-stroke: 		transparent;
+			text-fill-color: 	white;
+			text-stroke: 		transparent;
+		}
+		
+			
+		@include media-breakpoint-up(md) {
+		
+			font-size: $h1-font-size * 2;
+		
+		}
+		
+		margin-bottom: 1rem;
+					
+	}
+	
+	p {
+		
+		font-size: $lead-font-size * 0.8;
+		font-weight: $font-weight-base;
+		line-height: 1.25;
+		
+		@include media-breakpoint-up(md) {
+		
+			font-size: $lead-font-size;
+		
+		}
+		
+	}
+	
+}
+
+div#sectionAbout,
+div#sectionColophon {
+	
+	p,li {
+		
+		font-size: $font-size-base;
+		font-weight: $font-weight-base;
+		line-height: 1.35;
+		
+		@include media-breakpoint-up(md) {
+		
+			font-size: $font-size-base * 1.2;
+		
+		}
+		
+	}
+	
+	p.lead {
+		
+		margin-bottom: 1.5rem;
+		
+		font-weight: 600;
+		font-size: $lead-font-size * 0.8;
+		line-height: 1.35;
+		
+		@include media-breakpoint-up(md) {
+		
+			font-size: $lead-font-size * 1.2;
+		
+		}
+		
+	}
+	
+}
+
+section.section-colophon {
+	
+	color: white;
+	
+	h1.slide-set-title {
+	
+		text-transform: uppercase;
+		
+		font-size: 		$h1-font-size * 0.7;
+		font-weight: 	700;
+		line-height: 	1;
+				
+		color:						white;
+		-webkit-text-stroke-color:  white;
+		text-stroke-color:  white;
+		-webkit-text-fill-color: 	transparent;
+		text-fill-color: 	transparent;
+		-webkit-text-stroke-width: 	2px;
+		text-stroke-width: 	2px;
+		
+		@include media-breakpoint-up(md) {
+			-webkit-text-stroke-width: 	4px;
+			text-stroke-width: 	4px;
+		}
+		
+		strong {
+			font-weight: 700;
+			color:						white;
+			-webkit-text-fill-color: 	white;
+			-webkit-text-stroke: 		transparent;
+			text-fill-color: 	white;
+			text-stroke: 		transparent;
+		}
+		
+		@include media-breakpoint-up(md) {
+		
+			font-size: $h1-font-size * 1.5;
+		
+		}
+		
+		margin-top:		0;
+		margin-bottom: 	1rem;
+		
+	}
+	
+	p.lead {
+		
+		font-size: 		$lead-font-size * 0.85;
+		line-height: 	1.2;
+		font-weight: 600;
+		
+		@include media-breakpoint-up(md) {
+		
+			font-size: $lead-font-size * 1.2;
+		
+		}
+		
+		margin-bottom: 	0;
+		
+	}
+	
+	span.see-more {
+		
+		position: relative;
+		display: inline-block;
+		
+		margin-top: 2rem;
+		text-transform: uppercase;
+		font-weight: 700;
+		
+		height: 20px;
+		width: 100%;
+		overflow-y: hidden;
+		
+		p {
+			margin: 0;
+			padding: 0;
+			font-size: 16px;
+			line-height: 20px;
+			
+			position: absolute;
+			
+			animation: 6s see-more;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+			
+			&:first-of-type {
+				top: 20px;
+				animation-delay: 1s;
+			}
+			&:nth-of-type(2) {
+				top: 40px;
+				animation-delay: 3s;
+			}
+			&:nth-of-type(3) {
+				top: 60px;
+				animation-delay: 5s;
+			}
+		}
+		
+	}
+	
+}
+
+@keyframes see-more {
+    0% {
+	    top: 20px;
+	    opacity: 0;
+    }
+    30% {
+	    opacity: 1;
+    }
+    35% {
+		top: 0px;
+	}
+    40% {
+	    opacity: 1;
+    }
+    70% {
+	    top: -20px;
+	    opacity: 0;
+    }
+    100% {
+	    top: -20px;
+	    opacity: 0;
+    }
+}
+
+div.all-winners {
+	
+	h1 {
+		text-transform: uppercase;
+		
+		font-size: $h1-font-size * 0.8;
+		font-weight: 700;
+		line-height: 1;
+		
+		color:						white;
+		-webkit-text-stroke-color:  white;
+		text-stroke-color:  white;
+		-webkit-text-fill-color: 	transparent;
+		text-fill-color: 	transparent;
+		-webkit-text-stroke-width: 	3px;
+		text-stroke-width: 	3px;
+		
+		@include media-breakpoint-up(md) {
+			-webkit-text-stroke-width: 	4px;
+			text-stroke-width: 	4px;
+		}
+		
+		strong {
+			font-weight: 700;
+			color:						white;
+			-webkit-text-fill-color: 	white;
+			-webkit-text-stroke: 		transparent;
+			text-fill-color: 	white;
+			text-stroke: 		transparent;
+		}
+		
+			
+		@include media-breakpoint-up(md) {
+		
+			font-size: $h1-font-size * 2;
+		
+		}
+		
+		margin-bottom: 3rem;
+	}
+	
+	span.rank {
+		font-size: $lead-font-size;
+		text-align: left;
+		
+		@include media-breakpoint-up(md) {
+			font-size: $h2-font-size;
+		}
+		
+		font-weight: 700;
+		line-height: 1;
+		
+		color:						white;
+		-webkit-text-stroke-color:  white;
+		text-stroke-color:  white;
+		-webkit-text-fill-color: 	transparent;
+		text-fill-color: 	transparent;
+		-webkit-text-stroke-width: 	2px;
+		text-stroke-width: 	2px;
+	}
+	
+	h2.name {
+		font-size: $lead-font-size;
+		
+		@include media-breakpoint-up(md) {
+			font-size: $h2-font-size;
+		}
+
+		font-weight: 700;
+		line-height: 1;
+		
+		color:						white;
+	}
+	
+	p.meta {
+		color: white;
+		font-weight: 600;
+	}
+	
+	
+}
+
+div.slide.place-large {
+	h1 {		
+		font-size: $h1-font-size * 0.8;
+		font-weight: 700;
+		line-height: 1;
+	}
+	
+	p {
+		
+		font-size: $font-size-base;
+		font-weight: $font-weight-base;
+		line-height: 1.35;
+		
+		@include media-breakpoint-up(md) {
+		
+			font-size: $font-size-base * 1.2;
+		
+		}
+		
+	}
+	
+	p.lead {
+		
+		margin-bottom: 0.5rem;
+		
+		font-weight: 600;
+		font-size: $lead-font-size * 0.8;
+		line-height: 1.35;
+		
+		@include media-breakpoint-up(md) {
+		
+			font-size: $lead-font-size * 1.2;
+		
+		}
+	}
+}
+
+div.slide.place-small {
+	h1 {		
+		font-size: $h1-font-size * 0.8;
+		font-weight: 700;
+		line-height: 1;
+	}
+	
+	p {
+		
+		font-size: $font-size-base;
+		font-weight: $font-weight-base;
+		line-height: 1.35;
+		
+		@include media-breakpoint-up(md) {
+		
+			font-size: $font-size-base * 1.2;
+		
+		}
+		
+	}
+	
+	p.lead {
+		
+		margin-bottom: 0.5rem;
+		
+		font-weight: 600;
+		font-size: $lead-font-size * 0.8;
+		line-height: 1.35;
+		
+		@include media-breakpoint-up(md) {
+		
+			font-size: $lead-font-size;
+		
+		}
+	}
+}
