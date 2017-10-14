@@ -1,0 +1,60 @@
+## SITE AUTHORING INFO
+
+title: Civil Service LGBT Impact Index
+description: "The Civil Service LGBT Impact Index celebrates the civil servants making things better for LGBT people."
+author: "Civil Service Rainbow Alliance"
+
+
+baseurl: "/impact-index" # the subpath of your site, e.g. /blog
+url: "//civilservice.lgbt" # the base hostname & protocol for your site, e.g. http://example.com
+
+## ASSET PATHS
+
+video-path: "/assets/videos"
+image-path: "/assets/images"
+css-path: "/assets/styles"
+js-path: "/assets/scripts"
+
+logo: "/assets/images/site/logo.png"
+logo-svg: "/assets/images/site/logo.svg"
+logo-four-oh-four: "/assets/images/site/404.svg"
+footer-svg: "/assets/images/site/footer.svg"
+opengraph-image: "/assets/images/site/opengraph-image.png"
+twitter-image: "/assets/images/site/twitter-image.png"
+touch: "/assets/images/site/touch.png"
+pinned: "/assets/images/site/pinned.svg"
+pinned-colour: "#1d1d1d"
+
+
+## SOCIAL SETTINGS
+
+facebook-app-id: "" # For Facebook OpenGraph integration
+facebook-profile-id: "" # For Facebook OpenGraph integration
+facebook-slug: "" # Automatically pre-pends http://facebook.com/
+
+twitter-username: "" # Twitter handle i.e. joebloggs
+linkedin-username:  ""
+flickr-username:  ""
+instagram-username:  ""
+
+github-username:  ""
+github-repo: "https://github.com/"
+
+# Local development
+
+host: 192.168.1.66
+
+
+# Plugins and build settings
+
+permalink: pretty
+markdown: kramdown
+future: false
+sass:
+    sass_dir: _sass
+    sourcemap: true
+
+plugins:
+- jekyll-sitemap
+- jekyll-feed
+- jekyll-redirect-from
