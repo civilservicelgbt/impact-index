@@ -6,7 +6,7 @@ author: "Civil Service Rainbow Alliance"
 
 
 baseurl: "/impact-index" # the subpath of your site, e.g. /blog
-url: "//civilservice.lgbt" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https//civilservice.lgbt" # the base hostname & protocol for your site, e.g. http://example.com
 
 ## ASSET PATHS
 
