@@ -123,11 +123,9 @@
 <meta name="google-site-verification" content="{{ site.google-site-verification }}">
 
 <!-- Scripts -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
+<script type="text/javascript" src="{{ '/jquery.min.js' | prepend: site.js-path | prepend: site.baseurl | prepend: site.url }}"></script>
+<script type="text/javascript" src="{{ '/jquery-ui.min.js' | prepend: site.js-path | prepend: site.baseurl | prepend: site.url }}"></script>
 <script type="text/javascript" src="{{ '/scrolloverflow.min.js' | prepend: site.js-path | prepend: site.baseurl | prepend: site.url }}"></script>
-
 <script type="text/javascript" src="{{ '/jquery.fullPage.js' | prepend: site.js-path | prepend: site.baseurl | prepend: site.url }}"></script>
 
 <!-- CSS -->

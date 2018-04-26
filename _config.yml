@@ -42,7 +42,7 @@ github-repo: "https://github.com/"
 
 # Local development
 
-host: 192.168.1.66
+# host: 192.168.1.66
 
 
 # Plugins and build settings
