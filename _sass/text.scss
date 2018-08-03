@@ -13,12 +13,12 @@
 		text-stroke-color:  white;
 		-webkit-text-fill-color: 	transparent;
 		text-fill-color: 	transparent;
-		-webkit-text-stroke-width: 	3px;
-		text-stroke-width: 	3px;
+		-webkit-text-stroke-width: 	1px;
+		text-stroke-width: 	1px;
 		
 		@include media-breakpoint-up(md) {
-			-webkit-text-stroke-width: 	1px;
-			text-stroke-width: 	1px;
+			-webkit-text-stroke-width: 	2px;
+			text-stroke-width: 	2px;
 		}
 		
 		strong {
