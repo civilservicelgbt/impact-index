@@ -109,12 +109,12 @@ section.section-colophon {
 		text-stroke-color:  white;
 		-webkit-text-fill-color: 	transparent;
 		text-fill-color: 	transparent;
-		-webkit-text-stroke-width: 	2px;
-		text-stroke-width: 	2px;
+		-webkit-text-stroke-width: 	1px;
+		text-stroke-width: 	1px;
 		
 		@include media-breakpoint-up(md) {
-			-webkit-text-stroke-width: 	4px;
-			text-stroke-width: 	4px;
+			-webkit-text-stroke-width: 	2px;
+			text-stroke-width: 	2px;
 		}
 		
 		strong {
